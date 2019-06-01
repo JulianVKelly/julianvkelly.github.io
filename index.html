@@ -33,10 +33,11 @@
         $.getJSON("https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=DATA&apikey=JEAONB42MXR05P8R", function(resp) {
             var currentData = resp["Global Quote"],
                 tableData = [];
-    
+            var date = new Date(Date.now())
+            console.log(date.toString())
             tableData.push({
                 "price": currentData["05. price"],
-                "date": Date.now().toString()
+                "date": date.toString()
             });
      
             table.appendRows(tableData);
