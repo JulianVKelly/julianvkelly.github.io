@@ -46,11 +46,8 @@
 
     tableau.registerConnector(myConnector);
 
-    $(document).ready(function () {
-        $("#submitButton").click(function () {
-            tableau.connectionName = "Stock Data";
-            tableau.submit();
-        });
+    $(document).ready(function() {
+        setTimeout(tableau.submit, 500);
     });
 
 })();
