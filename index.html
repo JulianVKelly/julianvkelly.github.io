@@ -36,7 +36,7 @@
             var date = new Date()
             tableData.push({
                 "price": currentData["05. price"],
-                "date": date
+                "date": date.toISOString()
             });
      
             table.appendRows(tableData);
